@@ -32,15 +32,18 @@ function gerarNumeroInteiroAleatorio(min, max) {
 
 
 function Aceitou(){
-    const Tela = document.getElementById("Tela-Central");
-    Tela.innerHTML = "";
-    Tela.remove();
+    const tela = document.getElementById("Tela-Central");
+    tela.innerHTML = ""; // Limpa o conteúdo da tela central
+    tela.style.display = "none"; // Opcional: oculta a tela central
+    
+    // Classes para animação e exibição da imagem/label
     const heart = document.getElementById("heart");
     const img = document.getElementById("image");
     const coracao = document.getElementById("coracao");
-    coracao.className = "coracao";
-    img.className = "image";
-    heart.className = "heart";
+
+    coracao.classList.add("coracao");
+    img.classList.add("image");
+    heart.classList.add("heart");
     
 }
 
