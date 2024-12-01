@@ -45,15 +45,7 @@ function Aceitou(){
 }
 
 function mostrarImagem() {
-    const Tela = document.getElementById("Tela-Central");
-    Tela.innerHTML = "";
-    Tela.remove();
-    const heart = document.getElementById("heart");
-    const img = document.getElementById("image");
-    const coracao = document.getElementById("coracao");
-    coracao.className = "coracao";
-    img.className = "image";
-    heart.className = "heart";
+    Aceitou();
     // Exibe a imagem e a label
     const image = document.getElementById('image');
     const label = document.querySelector('.label');
