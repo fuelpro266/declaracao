@@ -44,16 +44,27 @@ function Aceitou(){
     
 }
 
-const button = document.getElementById('startButton');
-const image = document.querySelector('.image');
-const txtt = document.getElementById("txtt");
-button.addEventListener('click', () => {
-  image.classList.remove('hidden'); // Mostra a imagem
-  image.style.animation = 'none'; // Reseta a animação, se necessário
-  txtt.className = "txt";
-  txtt.innerHTML = "Acaba de ganhar essa belezinha";
-
-  setTimeout(() => {
-    image.style.animation = 'flyIn 3s ease-in-out forwards'; // Aplica a animação
-  }, 10);
-});
+function mostrarImagem() {
+    const Tela = document.getElementById("Tela-Central");
+    Tela.innerHTML = "";
+    Tela.remove();
+    const heart = document.getElementById("heart");
+    const img = document.getElementById("image");
+    const coracao = document.getElementById("coracao");
+    coracao.className = "coracao";
+    img.className = "image";
+    heart.className = "heart";
+    // Exibe a imagem e a label
+    const image = document.getElementById('image');
+    const label = document.querySelector('.label');
+    
+    image.classList.remove('hidden'); // Torna a imagem visível
+    label.classList.remove('hidden'); // Torna a label visível
+    label.style.display = 'block'; // Garante que a label será exibida
+    
+    // Aplica a animação para a imagem
+    image.style.animation = 'none'; // Reseta a animação
+    setTimeout(() => {
+      image.style.animation = 'flyIn 3s ease-in-out forwards'; // Aplica a animação
+    }, 10);
+  }
